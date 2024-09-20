@@ -1,0 +1,4 @@
+1. creating a client file to setup all running's functionality before running the app
+such as:
+a.routing ( routes name -> router -> add it to the client file)
+b. define the flutter util in this file to be used in the while app
