@@ -1,6 +1,10 @@
+import 'package:aloosra_clinic/core/helpers/extentions.dart';
+import 'package:aloosra_clinic/core/widgets/app_text_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../core/routing/app_route.dart';
+import '../../core/routing/routes.dart';
 import 'widgets/widgets.dart';
 
 class OnBoardingScreen extends StatelessWidget {
@@ -24,14 +28,16 @@ class OnBoardingScreen extends StatelessWidget {
                 const DoctorImageAndText(),
                 Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                  const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
                   child: Column(
                     children: [
                       const AppDescriptionText(),
                       SizedBox(
                         height: 30.h,
                       ),
-                      const StartButton()
+                       AppTextButton(buttonText:"Get Started", onPressed: (){
+                      context.pushReplacementNamed(routeName:Routes. loginScreen)  ;
+                      })
                     ],
                   ),
                 )
