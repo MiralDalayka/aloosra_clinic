@@ -49,6 +49,8 @@ dev_dependencies:
     sdk: flutter
 
   flutter_lints: ^3.0.0
+  #build the auto generated files
+  build_runner: ^2.4.11
 
 flutter:
 
