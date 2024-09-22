@@ -78,11 +78,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   verticalPadding: 14,
                   textStyle: TextStyles.font16WhiteSemiBold,
                   onPressed: () {
-
-                    context.pushReplacementNamed(
+                    context.pushNamed(
                         routeName: ''); //todo change the router name
                   },
                 ),
+                verticalSpace(16),
+                const TermsAndConditionsText(),
+                verticalSpace(60),
+                const AlreadyHaveAnAccountText()
               ],
             ),
           ),
