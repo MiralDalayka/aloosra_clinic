@@ -1,6 +1,5 @@
 // clint app file
 import 'package:aloosra_clinic/core/routing/app_route.dart';
-import 'package:aloosra_clinic/features/on_boarding/on_boarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

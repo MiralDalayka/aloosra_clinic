@@ -3,7 +3,6 @@ import 'package:aloosra_clinic/core/widgets/app_text_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../core/routing/app_route.dart';
 import '../../core/routing/routes.dart';
 import 'widgets/widgets.dart';
 
