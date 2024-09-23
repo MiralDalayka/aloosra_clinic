@@ -6,7 +6,7 @@ class DioFactory {
   DioFactory._();
 
   static Dio? dio;
-
+//async to wait until the object created
   static Dio getDio() {
     Duration timeOut = const Duration(seconds: 30);
 
