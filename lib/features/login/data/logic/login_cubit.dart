@@ -8,23 +8,29 @@ class LoginCubit extends Cubit<LoginState> {
   final LoginRepo _loginRepo;
 
   LoginCubit(this._loginRepo) : super(const LoginState.initial());
+
 //here i will define the controller for the validation
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+
   //also the form key
   final formKey = GlobalKey<FormState>();
 
 
-  void emitLoginStates(LoginRequestBody loginRequestBody) async {
+  void emitLoginStates() async {
     emit(const LoginState.loading());
 
-    final response = await _loginRepo.login(loginRequestBody);
+    final response = await _loginRepo.login(LoginRequestBody(
+        email: emailController.text,
+        password: passwordController.text
+    ));
 
-    response.when(success: (loginResponse) {
+        response.when(success: (loginResponse)
+    {
       emit(LoginState.success(loginResponse));
     }, failure: (error) {
-      //get model give string msg
-      emit(LoginState.error(error: error.apiErrorModel.message ?? ''));
+    //get model give string msg
+    emit(LoginState.error(error: error.apiErrorModel.message ?? ''));
     });
   }
 }

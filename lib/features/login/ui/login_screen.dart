@@ -1,4 +1,4 @@
-import 'package:aloosra_clinic/core/helpers/extentions.dart';
+import 'package:aloosra_clinic/core/helpers/extensions.dart';
 import 'package:aloosra_clinic/core/routing/app_route.dart';
 import 'package:aloosra_clinic/features/login/data/logic/login_cubit.dart';
 import 'package:aloosra_clinic/features/login/data/models/login_request_body.dart';
@@ -57,7 +57,7 @@ class LoginScreen extends StatelessWidget {
                           verticalSpace(16),
                           const TermsAndConditionsText(),
                           verticalSpace(60),
-                          const AlreadyHaveAnAccountText(),
+                          const DoseNotHaveAnAccountText(),
                           const LoginBlocListener(),
                         ],
                       ),
@@ -65,11 +65,15 @@ class LoginScreen extends StatelessWidget {
   }
 
   void validateThenLogin(BuildContext context) {
-    if (context.read<LoginCubit>().formKey.currentState!.validate()) {
-      context.read<LoginCubit>().emitLoginStates(LoginRequestBody(
-            email: context.read<LoginCubit>().emailController.text,
-            password: context.read<LoginCubit>().passwordController.text,
-          ));
-    }
+    if(context.read<LoginCubit>().formKey.currentState!.validate())
+{
+  context.read<LoginCubit>().emitLoginStates();
+}
+    // if (context.read<LoginCubit>().formKey.currentState!.validate()) {
+    //   context.read<LoginCubit>().emitLoginStates(LoginRequestBody(
+    //         email: context.read<LoginCubit>().emailController.text,
+    //         password: context.read<LoginCubit>().passwordController.text,
+    //       ));
+    // }
   }
 }
