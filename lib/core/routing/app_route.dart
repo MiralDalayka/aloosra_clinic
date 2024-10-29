@@ -1,6 +1,8 @@
 //class that generate routs
 import 'package:aloosra_clinic/core/di/dependency_injection.dart';
 import 'package:aloosra_clinic/features/login/data/logic/login_cubit.dart';
+import 'package:aloosra_clinic/features/sign_up/logic/sign_up_cubit.dart';
+import 'package:aloosra_clinic/features/sign_up/ui/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:aloosra_clinic/core/routing/routes.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -21,6 +23,13 @@ class AppRoute {
           return _route(BlocProvider(
               create: (context) => getIt<LoginCubit>(),
               child: const LoginScreen()));
+        }
+      case Routes.signupScreen:
+        {
+          //apply the bloc
+          return _route(BlocProvider(
+              create: (context) => getIt<SignupCubit>(),
+              child: const SignupScreen()));
         }
       case Routes.homeScreen:
         {

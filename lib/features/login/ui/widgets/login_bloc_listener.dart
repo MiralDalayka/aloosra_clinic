@@ -1,4 +1,4 @@
-import 'package:aloosra_clinic/core/helpers/extentions.dart';
+import 'package:aloosra_clinic/core/helpers/extensions.dart';
 import 'package:aloosra_clinic/core/routing/app_route.dart';
 import 'package:aloosra_clinic/features/login/data/logic/login_cubit.dart';
 import 'package:aloosra_clinic/features/login/data/logic/login_state.dart';
