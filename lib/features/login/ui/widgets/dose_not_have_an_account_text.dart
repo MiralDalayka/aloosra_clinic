@@ -2,6 +2,7 @@ import 'package:aloosra_clinic/core/helpers/extensions.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/style.dart';
 
 class DoseNotHaveAnAccountText extends StatelessWidget {
@@ -22,7 +23,7 @@ class DoseNotHaveAnAccountText extends StatelessWidget {
                 style: TextStyles.font13BlueSemiBold,
                 recognizer: TapGestureRecognizer()
                   ..onTap = () {
-                    // context.pushReplacementNamed(rouRoutes.loginScreen);
+                    context.pushReplacementNamed(routeName: Routes.signupScreen);
                   },
               ),
 
